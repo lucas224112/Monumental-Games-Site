@@ -1,0 +1,455 @@
+body {
+    margin: 0px;padding: 0px;box-sizing: border-box;
+    background-color: rgb(24, 24, 24);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+}
+
+.debug {
+    width: 100%;
+    height: 50px;
+    background: none;
+}
+
+a {
+    background: none;
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+}
+
+a[type = "button"]{
+    color: rgb(150, 150, 150);
+    background: none;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .075em;
+}
+
+a:hover[type = "button"]{
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+div[type='linha']{
+    margin: 0px;
+    width: 90%;
+    height: 1.5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(50, 50, 50);
+}
+
+.banerUp {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: rgba(32, 32, 32, 98%);
+    border-top: 2px solid rgba(10, 10, 10, 95%);
+    border-top-color: rgb(20, 20, 20);
+    z-index: 100;
+}
+
+.banerUp img{
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.banerUp div[id='right'] {
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.banerUp a{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+.banerUp a[class="page_not_selected"] div {
+    transition: 0.1s;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -15px;
+    margin-top: 19px;
+    background-color: rgb(120, 120, 255);
+    width: 100%;
+    height: 0px;
+}
+
+.banerUp a[class="page_selected"] div {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -15px;
+    margin-top: 19px;
+    background-color: rgb(120, 120, 255);
+    width: 100%;
+    height: 0px;
+}
+
+.banerUp a[class="page_selected"] div {
+    margin-top: 13px;
+    height: 6px;
+}
+
+.banerUp a:hover[class="page_not_selected"] div {
+    transition: 0.3s;
+    margin-top: 13px;
+    height: 6px;
+}
+
+.background {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    background: none;
+}
+
+.background[type="start"] {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: auto;
+    position: absolute;
+}
+
+.background[type="start"] img {
+    opacity: 0;
+    z-index: 50;
+    width: calc(100% + 20px);
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: .3s;
+}
+
+.background[type="start"] img[class="selected"] {
+    opacity: 1;
+}
+
+.background[type="start"] div[type="background_img"] img[class="selected"] {
+    animation-fill-mode: forwards;
+    animation: animation_background_00 7.5s linear infinite;
+}
+
+.background[type="start"] div[type="title_img"] img[class="selected"] {
+    animation-fill-mode: forwards;
+    animation: animation_background_01 7.5s linear infinite;
+}
+
+@keyframes animation_background_00 {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(-20px); }
+}
+
+@keyframes animation_background_01 {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(20px); }
+}
+
+.background[type="start"] div[type="title_img"] img{
+    height: 20%;
+    width: auto;
+    margin-left: 5%;
+    margin-top: 60vh;
+}
+
+.baseboard {
+    width: 100%;
+    height: 208px;
+    background-color: rgb(32, 32, 32);
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
+.baseboard h1{
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+.baseboard div[class='baseboard-sobre']{
+    display: flex;
+    margin: 0px;
+    width: 90%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.baseboard div[class='baseboard-sobre'] div{
+    margin-right: 50px;
+}
+
+.baseboard div[class='baseboard-sobre'] h1{
+    margin: 0px;
+    font-size: 20px;
+}
+
+.baseboard div[class='baseboard-sobre'] p{
+    margin: 0px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.baseboard div[class='baseboard-sobre'] a{
+    margin: 2px;
+    margin-right: 10px;
+}
+
+.copyright{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(40, 40, 40);
+}
+
+.copyright li{
+    margin: 0px;
+    padding-top: 2px;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+.spinner {
+    margin: 500px;
+    z-index: 99;
+    border: 8px solid rgba(50, 50, 50, .1);
+    border-left-color: rgb(120, 120, 255);
+    border-right-color: rgb(120, 120, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    animation: spin 2s linear infinite;
+}
+
+.spinner div{
+    margin: auto;
+    border: 6px solid rgba(50, 50, 50, .1);
+    border-top-color: rgb(120, 120, 255);
+    border-bottom-color: rgb(120, 120, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: spin_r 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin_r {
+    to { transform: rotate(-360deg); }
+}
+
+@media screen and (min-width: 450px) {
+
+    .baseboard div[class="Redes Sociais"]{
+        display: flex;
+        width: 90%;
+        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .baseboard a div[id="facebook"]{
+        margin: 0px;
+        height: 35px;
+        width: 35px;
+        background-image: url(../media/images/icons/facebook.png);
+        background-repeat: no-repeat;
+    }
+    .baseboard a div[id="instagram"]{
+        margin: 0px;
+        height: 35px;
+        width: 35px;
+        background-image: url(../media/images/icons/instagram.png);
+        background-repeat: no-repeat;
+    }
+    .baseboard a div[id="youtube"]{
+        margin: 0px;
+        height: 35px;
+        width: 35px;
+        background-image: url(../media/images/icons/youtube.png);
+        background-repeat: no-repeat;
+    }
+
+    .baseboard div a{
+        margin: 0px;
+        height: 35px;
+        width: 35px;
+    }
+
+    .baseboard a:hover div{
+        transition: 0.3s;
+        filter: brightness(0.5) sepia(1) saturate(2) hue-rotate(180deg);
+    }
+
+    .baseboard div[class="social"]{
+        margin: 5px;
+        margin-top: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .baseboard {
+        height: auto;
+    }
+
+    .baseboard div[class='baseboard-sobre']{
+        height: auto;
+        display: inline;
+    }
+
+    .baseboard div[class='baseboard-sobre'] h1{
+        margin: 0px;
+        font-size: 15px;
+    }
+
+    .baseboard div[class='baseboard-sobre'] p{
+        font-size: 10px;
+    }
+    
+    .baseboard div[class='baseboard-sobre'] a{
+        font-size: 10px;
+    }
+
+    .baseboard div[class="Redes Sociais"]{
+        display: flex;
+        width: 90%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .baseboard a div[id="facebook"]{
+        margin: 0px;
+        height: 15px;
+        width: 15px;
+        background-image: url(../media/images/icons/facebook.png);
+        background-repeat: no-repeat;
+    }
+    .baseboard a div[id="instagram"]{
+        margin: 0px;
+        height: 15px;
+        width: 15px;
+        background-image: url(../media/images/icons/instagram.png);
+        background-repeat: no-repeat;
+    }
+    .baseboard a div[id="youtube"]{
+        margin: 0px;
+        height: 15px;
+        width: 15px;
+        background-image: url(../media/images/icons/youtube.png);
+        background-repeat: no-repeat;
+    }
+
+    .baseboard div a{
+        margin: 0px;
+        height: 15px;
+        width: 15px;
+    }
+
+    .baseboard a:hover div{
+        transition: 0.3s;
+        filter: brightness(0.5) sepia(1) saturate(2) hue-rotate(180deg);
+    }
+
+    .baseboard div[class="social"]{
+        margin: 5px;
+        margin-top: 20px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .banerUp {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 35px;
+        display: flex;
+        background-color: rgba(32, 32, 32, 98%);
+        border-top: 0px solid rgba(10, 10, 10, 95%);
+        z-index: 100;
+    }
+
+    .banerUp img{
+        height: 90%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .banerUp div[id='right'] {
+        margin-left: auto;
+        margin-right: 0px;
+    }
+    
+    .banerUp a{
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        width: auto;
+        height: auto;
+        float: left;
+    }
+    
+    .banerUp a[class="page_not_selected"] div {
+        transition: 0.1s;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-left: -8px;
+        margin-top: 10px;
+        background-color: rgb(120, 120, 255);
+        width: 100%;
+        height: 0px;
+    }
+    
+    .banerUp a[class="page_selected"] div {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-left: -8px;
+        margin-top: 10px;
+        background-color: rgb(120, 120, 255);
+        width: 100%;
+        height: 0px;
+    }
+    
+    .banerUp a[class="page_selected"] div {
+        margin-top: 5px;
+        height: 5px;
+    }
+    
+    .banerUp a:hover[class="page_not_selected"] div {
+        transition: 0.3s;
+        margin-top: 5px;
+        height: 5px;
+    }
+
+    .background h1{
+        font-size: 15px;
+    }
+
+    .copyright{
+        height: 20px;
+        border-top: 10px solid rgb(32, 32, 32);
+    }
+
+}
